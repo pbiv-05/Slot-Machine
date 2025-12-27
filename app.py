@@ -2,7 +2,7 @@ import streamlit as st
 import random
 import time
 
-# ---------------- CONFIG ----------------
+
 ROWS, COLS = 3, 3
 MAX_LINES = 3
 MIN_BET, MAX_BET = 1, 100
@@ -67,22 +67,22 @@ def check_winnings(columns, lines, bet, values):
 st.set_page_config(page_title="Slot Machine", page_icon="🎰")
 st.title("🎰 Slot Machine Web App")
 
-# Session state (important for balance)
+# Session state to check balance
 if "balance" not in st.session_state:
     st.session_state.balance = 0
 
-# Deposit
+# to Deposit the amount for betting
 deposit = st.number_input("Deposit Amount", min_value=0, step=10)
 if st.button("Add Deposit"):
     st.session_state.balance += deposit
 
 st.subheader(f"💰 Balance: ${st.session_state.balance}")
 
-# Betting inputs
+# take Betting inputs from the user
 lines = st.selectbox("Number of lines", [1, 2, 3])
 bet = st.number_input("Bet per line", min_value=MIN_BET, max_value=MAX_BET)
 
-# Spin button
+# Spin button 
 if st.button("🎰 SPIN"):
     total_bet = lines * bet
 
@@ -94,7 +94,7 @@ if st.button("🎰 SPIN"):
 
         slots = get_slot_machine_spin(ROWS, COLS, symbol_count)
 
-        # Display slots
+        # Displaying the  slots
         for row in range(ROWS):
             cols = st.columns(3)
             for col_index in range(3):
@@ -110,3 +110,5 @@ if st.button("🎰 SPIN"):
             st.warning("No win, try again!")
 
         st.subheader(f"💰 Updated Balance: ${st.session_state.balance}")
+
+
