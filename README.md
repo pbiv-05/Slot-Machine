@@ -70,7 +70,7 @@ Balance is updated after each spin
 If you want to run this project on your local machine:
 
 1️⃣ Clone the repository
-git clone https://github.com/your-username/slot-machine-streamlit.git
+git clone(https://github.com/pbiv-05/Slot-Machine)
 cd slot-machine-streamlit
 
 2️⃣ Install dependencies
