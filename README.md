@@ -1,64 +1,88 @@
-#  Python Slot Machine Game
+ Slot Machine Web App (Python + Streamlit)
 
-Welcome to the **Slot Machine Game** – a fun, text-based Python project that simulates a classic slot machine in your terminal!
+A fully interactive slot machine game built using Python and Streamlit, deployed as a live web application.
+The project demonstrates game logic implementation, state management, UI rendering with images, and cloud deployment.
 
----
 
-##  About the Project
+ Features
 
-This is a beginner-friendly Python project where you can:
+ Interactive 3×3 slot machine
 
-- Deposit money  
-- Bet on 1 to 3 lines  
-- Spin a 3x3 slot grid  
-- Win (or lose!) based on matching symbols  
-- Track your balance after each spin  
+ Deposit and balance management
 
-The game includes randomized spins, symbol values, and easy-to-understand logic — perfect for anyone learning Python.
+ Configurable betting lines and bet amount
 
----
+ Image-based slot symbols
 
-## Features
+ Randomized slot spin logic
 
--  **Deposit system** to add balance  
--  **Betting system** with customizable lines & limits  
--  **Randomized spins** using Python’s `random` module  
--  **Winnings calculation** based on matching lines  
--  Clean and modular code with clear comments  
--  Fully terminal-based – no external libraries needed
+ Accurate win calculation per line
 
----
+ Deployed as a clickable live web app
 
-##  Technologies Used
+ Tech Stack
 
-- Python 3
-- `random` module
-- Loops, functions, dictionaries, lists, and user input handling
+Language: Python
 
----
+Web Framework: Streamlit
 
-## ▶ How to Play
+UI Rendering: Streamlit components (st.image, st.button, st.columns)
 
-1. Clone the repo or download the file  
-2. Run the script in any Python 3 environment  
-3. Follow the prompts:
-   - Enter your deposit
-   - Choose how many lines to bet on (1–3)
-   - Enter your bet per line
-   - Spin the machine and try your luck!
+State Management: st.session_state
 
----
+Deployment: Streamlit Cloud
 
-##  Example Output
+Version Control: Git & GitHub
 
-what would you like to deposit? $100
-how many lines would you like to bet on (1-3)? 3
-how much would you like to bet on each lines? 10
-you are betting $10 on 3 lines. Your total bet is: $30
+ How the Game Works
 
-A | B | C
-A | A | A
-D | C | B
+User deposits an initial balance
 
-you won $50
-you won on lines: 2
+User selects:
+
+Number of lines (1–3)
+
+Bet amount per line
+
+On clicking SPIN:
+
+Slot symbols are generated randomly
+
+Results are displayed using images
+
+Winnings are calculated based on matching symbols across selected lines
+
+Balance is updated after each spin
+
+📂 Project Structure
+.
+├── app.py                # Main Streamlit application
+├── requirements.txt      # Project dependencies
+├── images/               # Slot symbol images
+│   ├── A.png
+│   ├── B.png
+│   ├── C.png
+│   └── D.png
+└── README.md             # Project documentation
+
+▶️ Run Locally
+
+If you want to run this project on your local machine:
+
+1️⃣ Clone the repository
+git clone https://github.com/your-username/slot-machine-streamlit.git
+cd slot-machine-streamlit
+
+2️⃣ Install dependencies
+pip install -r requirements.txt
+
+3️⃣ Run the app
+streamlit run app.py
+
+
+The app will open in your browser at:
+
+http://localhost:8501
+
+
+
